@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Machine Learning Week 1 Summary, 陽台上的瑪格麗特の雜記">
+    <meta name="keywords" content="Machine Learning Week 3 Summary, 陽台上的瑪格麗特の雜記">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Machine Learning Week 1 Summary | 陽台上的瑪格麗特の雜記</title>
+    <title>Machine Learning Week 3 Summary | 陽台上的瑪格麗特の雜記</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Machine Learning Week 1 Summary</h1>
+                    <h1 class="description center-align post-title">Machine Learning Week 3 Summary</h1>
                 </div>
             </div>
         </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-04-13
                 </div>
                 
 
@@ -466,24 +466,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="machine-learning-week-1-summary">Machine Learning Week 1 Summary</h2>
-<h5 id="supervised-learning-有監督學習">Supervised Learning 有監督學習</h5>
-<p>是一種給了“答案”的訓練模型方法。</p>
-<h5 id="unspervised-learning-無監督學習">Unspervised Learning 無監督學習</h5>
-<p>需要模型自行找出答案的訓練模型方法。</p>
-<h5 id="cost-function-代價涵數">Cost function 代價涵數</h5>
-<p>計算預測值與真實值最小之差。在課程中介紹的Logistic Regression中是使用最小二乘法計算的 公式如下： <span class="math display">\[
-J(\Theta_{0}, \Theta_{1}) = \frac{1}{2} \sum_{i=1}^{m} (h_{\Theta}(x^{i})-y^{i}))^{2}
-\]</span></p>
-<h5 id="gradient-descent-梯度下降法">Gradient descent 梯度下降法</h5>
-<p>真實模型一般都是非線性的，可以靠梯度下降法來找出局部最小值。 計算方法： repeat until converge { <span class="math display">\[
-\theta _{j} = \theta_{j} - \alpha\frac{\partial }{\partial \theta_{j}}J(\theta_{0},\theta_{1})
-\]</span> } <span class="math display">\[
-\text{注意}\alpha過大會導致結果與目標偏離，太小的話會導致訓練時間過長。
-\]</span></p>
-<h5 id="batch-是什麼">“Batch” 是什麼</h5>
-<p>每次一步訓練中所使用的example，在數據量大時就很重要了。</p>
-
+                <h2 id="Classification-分類"><a href="#Classification-分類" class="headerlink" title="Classification 分類"></a>Classification 分類</h2><p>是將regression中的問題變作分類問題，在判別單個類別問題上，就是binary classification problem。<br>y={0,1}<br>一般而言，只要regression output大於0.5就會被判為1,少於0.5就會被判為0。<br>當然，這個decision boundary 是可以跟據情況自訂的。</p>
+<h2 id="Hypothesis-Representation"><a href="#Hypothesis-Representation" class="headerlink" title="Hypothesis Representation"></a>Hypothesis Representation</h2><p>為了做到以上分類，引入sigmoid function</p>
+<script type="math/tex; mode=display">
+h(\theta) = g(\theta^Tx)\\
+z=\theta^Tx\\
+g(z)=\frac{1}{1+e^{-z}}\\</script>
             </div>
             <hr/>
 
@@ -508,7 +496,7 @@ J(\Theta_{0}, \Theta_{1}) = \frac{1}{2} \sum_{i=1}^{m} (h_{\Theta}(x^{i})-y^{i})
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://teacookies1031.github.io/2020/03/29/Machine_learning_week1_summary/">https://teacookies1031.github.io/2020/03/29/Machine_learning_week1_summary/</a>
+                    <a href="https://teacookies1031.github.io/2020/04/13/Machine_learning_week3_summary/">https://teacookies1031.github.io/2020/04/13/Machine_learning_week3_summary/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -709,37 +697,43 @@ J(\Theta_{0}, \Theta_{1}) = \frac{1}{2} \sum_{i=1}^{m} (h_{\Theta}(x^{i})-y^{i})
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/03/29/hello-world/">
+                <a href="/2020/04/13/Machine_learning_week3_summary/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Machine Learning Week 3 Summary">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Machine Learning Week 3 Summary</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            Machine Learning Week 3 Summary
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            陽台上的瑪格麗特
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%B8%E6%B8%A3%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" class="post-category">
+                                    學渣學習筆記
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -750,32 +744,31 @@ J(\Theta_{0}, \Theta_{1}) = \frac{1}{2} \sum_{i=1}^{m} (h_{\Theta}(x^{i})-y^{i})
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/29/Guns%20Germs%20and%20Steel%20The%20Fates%20of%20Human%20Societies/">
+                <a href="/2020/04/05/Machine_learning_week2_summary/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Guns Germs and Steel The Fates of Human Societies">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Machine Learning Week 2 Summary">
                         
-                        <span class="card-title">Guns Germs and Steel The Fates of Human Societies</span>
+                        <span class="card-title">Machine Learning Week 2 Summary</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《槍炮、病菌與鋼鐵：人類社會的命運》（Guns, Germs, and Steel: The Fates of Human Societies）
-猶在清末期間，也就是第一次鴉片戰爭前，身為最早一批接觸外國的朝臣林則除，對於英國的評價就不過是
+                            Machine Learning Week 2 Summary
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%95%B6%E6%88%91%E7%9C%8B%E9%80%99%E6%9C%AC%E6%9B%B8%E6%99%82%EF%BC%8C%E6%88%91%E5%9C%A8%E8%83%A1%E6%80%9D%E4%BA%82%E6%83%B3%E4%BB%80%E9%BA%BC/" class="post-category">
-                                    當我看這本書時，我在胡思亂想什麼
+                            <a href="/categories/%E5%AD%B8%E6%B8%A3%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/" class="post-category">
+                                    學渣學習筆記
                                 </a>
                             
                             
